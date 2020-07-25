@@ -76,15 +76,10 @@
             </div>
         </div>
     </nav>
-    {{--        <div id="response"> API response here</div>--}}
+
+    @yield('content')
+
 </div>
-{{--<script> fetch('api/locations', {headers: {'x-csrf-token': document.querySelector("meta[name='csrf-token']").getAttribute("content")}}).then(function (response) {--}}
-{{--        response.json().then(function (data) {--}}
-{{--            var str = JSON.stringify(data.location);--}}
-{{--            document.getElementById('response').innerHTML = str;--}}
-{{--        });--}}
-{{--    }).catch(function (err) {--}}
-{{--        console.log('Error: ' + err);--}}
-{{--    });</script>--}}
+
 </body>
 </html>

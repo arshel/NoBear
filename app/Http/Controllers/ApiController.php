@@ -12,6 +12,7 @@ class ApiController extends Controller
 
     public function getLocation()
     {
+        // getting all locations
         $locations = Location::get()
             ->toJson(JSON_PRETTY_PRINT);
         return response($locations, 200);
@@ -19,7 +20,7 @@ class ApiController extends Controller
 
     public function filterLocation($latitude, $longitude)
     {
-        if (Location::where('latitude', $latitude)->where('longitude', $longitude)->exists()) {
+        if (Location::where('latitude', $latitude)->where('longitude', $longitude)->exists()) { // if the location exists
             $locations = Location::selectRaw("*,
                           ( 6371 * acos( cos( radians($latitude) ) *
                             cos( radians( latitude ) )

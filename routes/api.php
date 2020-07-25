@@ -18,8 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware(['auth:api', 'throttle:10,60'])->group(function () {
 Route::get('locations', 'ApiController@getLocation');
 Route::get('locations/{latitude}/{longitude}', 'ApiController@filterLocation');
 Route::post('locations/create', 'ApiController@createLocation');
-});
+
