@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::delete('locations/delete/{locationId}', 'ApiController@destroyLocation');
 Route::get('locations', 'ApiController@getLocation');
 Route::get('locations/{latitude}/{longitude}', 'ApiController@filterLocation');
-Route::post('locations/create', 'ApiController@createLocation');
 
