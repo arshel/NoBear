@@ -13,6 +13,6 @@ Run the database migrations `php artisan migrate`<br>
 import the csv file in the database <br>
 Serve the application on the PHP development server `php artisan serve`<br>
 **api links** <br>
-`api/locations`<br>
+`api/locations`<br> gets all locations<br>
 `api/locations/latitude/longitude` to get all locations within a 25km radius <br>
 `locations/delete/{locationId}`
